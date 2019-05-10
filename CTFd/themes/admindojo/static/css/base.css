@@ -170,8 +170,8 @@ select.form-control {
     flex: 1 1 auto;
     max-width: 100%;
     padding: 40px 0;
-margin-left: 20%;
-margin-right: 20%;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 .modal-lg {
 	  max-width: 1200px;
