@@ -59,6 +59,10 @@
 			<div class="collapse navbar-collapse" id="base-navbars">
 				<ul class="navbar-nav mr-auto">
 
+                    <li class="nav-item">
+						<a class="nav-link" href="{{ url_for('page_gettingstarted') }}">Getting-started</a>
+					</li>
+
 					<li class="nav-item">
 						<a class="nav-link" href="{{ url_for('challenges.listing') }}">Trainings</a>
 					</li>
@@ -69,7 +73,7 @@
 						   aria-expanded="true">Instructions</a>
 						<div class="dropdown-menu">
 							{% for page in get_training_instructions() %}
-							    <a class="dropdown-item" href="{{ url_for('page_trainings', training=page) }}">{{ page.split(".")[0] | replace('-', ' ')  | title }}</a>
+							    <a class="dropdown-item" href="{{ url_for('page_trainings', training=page.split(".")[0]) }}">{{ page.split(".")[0] | replace('-', ' ')  | title }}</a>
 							{% endfor %}
 						</div>
 					</li>
