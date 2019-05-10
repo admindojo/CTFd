@@ -6,20 +6,16 @@ from markdown.extensions import Extension
 
 def load(app):
 
-    def make_tree():
-        path = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'pages' )
-        tree = dict()
+    def get_training_instructions():
+        path = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'instructions')
         try:
             lst = os.listdir(path)
         except OSError:
             pass  # ignore errors
-        else:
-            for name in lst:
-                fn = name
-                tree.update(dict(name=fn))
+
         return lst 
 
-    app.jinja_env.globals.update(make_tree=make_tree)
+    app.jinja_env.globals.update(get_training_instructions=get_training_instructions)
 
     @app.route("/page_trainings/<string:training>")
     def page_trainings(training):
@@ -28,10 +24,35 @@ def load(app):
         :return: template
         """
         dir_path = os.path.dirname(os.path.realpath(__file__))
-        content_path = os.path.join(dir_path, 'pages', training)
+        content_path = os.path.join(dir_path, 'instructions', training)
         mdextensions = ['pymdownx.details']
         md = markdown.Markdown(extensions=mdextensions)
 
+        return render_template('page_content.html', content=md.convert(open(content_path).read()))
 
+
+    @app.route("/about")
+    def page_about():
+        """
+        render page by python-markdown with md-extentions
+        :return: template
+        """
+        dir_path = os.path.dirname(os.path.realpath(__file__))
+        content_path = os.path.join(dir_path, 'pages', 'about.md')
+        mdextensions = ['pymdownx.details']
+        md = markdown.Markdown(extensions=mdextensions)
+
+        return render_template('page_content.html', content=md.convert(open(content_path).read()))
+
+    @app.route("/faq")
+    def page_faq():
+        """
+        render page by python-markdown with md-extentions
+        :return: template
+        """
+        dir_path = os.path.dirname(os.path.realpath(__file__))
+        content_path = os.path.join(dir_path, 'pages', 'faq.md')
+        mdextensions = ['pymdownx.details']
+        md = markdown.Markdown(extensions=mdextensions)
 
         return render_template('page_content.html', content=md.convert(open(content_path).read()))

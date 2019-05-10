@@ -62,20 +62,19 @@
 					<li class="nav-item">
 						<a class="nav-link" href="{{ url_for('challenges.listing') }}">Trainings</a>
 					</li>
-						<li class="nav-item">
-					</li>
-
 
 					<li class="nav-item dropdown">
 						<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
 						   aria-haspopup="true"
 						   aria-expanded="true">Instructions</a>
 						<div class="dropdown-menu">
-							{% for page in make_tree() %}
+							{% for page in get_training_instructions() %}
 							    <a class="dropdown-item" href="{{ url_for('page_trainings', training=page) }}">{{ page.split(".")[0] | replace('-', ' ')  | title }}</a>
 							{% endfor %}
 						</div>
 					</li>
+
+
 
 
 					{% if get_config('account_visibility') != 'admins' %}
@@ -100,6 +99,14 @@
 				<hr class="d-sm-flex d-md-flex d-lg-none">
 
 				<ul class="navbar-nav ml-md-auto d-block d-sm-flex d-md-flex">
+                    <li class="nav-item">
+						<a class="nav-link" href="{{ url_for('page_faq') }}">FAQ</a>
+					</li>
+
+                    <li class="nav-item">
+						<a class="nav-link" href="{{ url_for('page_about') }}">About</a>
+					</li>
+
 					{% if name is defined %}
 						{% if type == 'admin' %}
 							<li class="nav-item">
@@ -129,10 +136,15 @@
 								<a class="nav-link d-none d-md-block d-lg-block">|</a>
 							</li>
 						{% endif %}
+
 						<li class="nav-item">
 							<a class="nav-link" href="{{ url_for('auth.login') }}">Login</a>
 						</li>
 					{% endif %}
+
+
+
+
 				</ul>
 			</div>
 		</div>
