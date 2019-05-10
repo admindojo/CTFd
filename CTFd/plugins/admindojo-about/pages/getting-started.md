@@ -1,11 +1,11 @@
-## about adminDōjō
-
-adminDōjō provides an easy to setup enviroment to train real-world Linux administration tasks in preconfigured VirtualMachines.
+adminDōjō provides an **easy to setup environment** to train **real-world Linux administration tasks** in preconfigured VirtualMachines.
 
 Each training contains a real-world scenario and in-depth explanations.
-After completing a scenario, it gets verified and rated by the Testing Framework InSpec - this way you know exactly if you implemented best-practices.
 
-Since Gamification can help motivating yourself, adminDōjō also measures the time you needed and calculates a score for each scenario. 
+
+Each training gets verified and rated - this way you know exactly if you implemented best-practices.
+
+To help motivating yourself, adminDōjō allows you to track your progress online and compete with others!
 
 **adminDōjō is not just a simulation**!
 
@@ -14,7 +14,7 @@ adminDōjō uses unmodified Linux images and real-world objectives - everything 
 ## Getting started 
 
 1. Install required tools
-2. Choose a training on the left
+2. [Browse trainings](https://admindojo.org/challenges)
 3. Start the preconfigured VM
 4. Read the objectives and implement them
 5. Run `admindojo check ` to verify your solution
@@ -48,9 +48,16 @@ adminDōjō utilizes some third-party tools:
     - You're now inside the VM and can start the training
 6. Run `admindojo` for instructions
 
+
+### Tracking progress at admindojo.org
+To track your progress online, you'll get a `token` after completing a training. Go to [challenges](https://admindojo.org/challenges), open a training and submit the `token`.
+
+You do need to [register](https://admindojo.org/register) at admindojo.org to track your progress.
+(In case you're familliar with CTFs, you'll be familliar with the process.)
+
 ## Usage
 ### General
-adminDōjō heavily utilizes [Vagrant](https://www.vagrantup.com) thus starting and rebooting the VM differs from normal operation.
+adminDōjō heavily utilizes [Vagrant](https://www.vagrantup.com) thus starting and rebooting the VM differs from normal operation:
 
 - Use `vagrant ssh` to login/jump into the VM
 - You exit the VM with _cms+D_ or `exit`
@@ -73,7 +80,7 @@ Your user with sudo permission:
     2. inside training directory: `vagrant destroy` and `vagrant up` to start again
     
 ### Remove VM after finishing a training
-- inside training directory: `vagrant destroy`
+- inside training directory: `vagrant destroy` (VM needs to be running)
 
 ### Update admindojo
 1. Open Powershell(Windows) or Terminal(Mac&Linux)
@@ -85,7 +92,7 @@ Your user with sudo permission:
 
 In case you are familiar with vagrant and ssh you can SSH directly to your admindojo box(SSH could require changes to the Vagrantfile depending on the Box Version).
 
-Since admindojo uses real-world tools under the hood you're able to use their native functions:
+Since adminDōjō uses real-world tools under the hood you're able to use their native functions:
 
 - Vagrant 
     - [Official documentation](https://www.vagrantup.com/docs/cli/)
