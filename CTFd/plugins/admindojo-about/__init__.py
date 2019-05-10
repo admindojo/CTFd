@@ -2,14 +2,18 @@ from flask import render_template
 import os
 import markdown
 from markdown.extensions import Extension
+from CTFd.cache import cache, make_cache_key
+import re
 
 
 def load(app):
 
     def get_training_instructions():
         path = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'instructions')
+        reg = re.compile(r'^\.')
         try:
-            lst = os.listdir(path)
+
+            lst = [x for x in os.listdir(path) if not reg.match(x)]
         except OSError:
             pass  # ignore errors
 
@@ -17,14 +21,15 @@ def load(app):
 
     app.jinja_env.globals.update(get_training_instructions=get_training_instructions)
 
-    @app.route("/page_trainings/<string:training>")
+    @app.route("/instructions/<string:training>")
+    @cache.cached(timeout=60)
     def page_trainings(training):
         """
         render page by python-markdown with md-extentions
         :return: template
         """
         dir_path = os.path.dirname(os.path.realpath(__file__))
-        content_path = os.path.join(dir_path, 'instructions', training)
+        content_path = os.path.join(dir_path, 'instructions', os.path.join(training + os.path.extsep + 'md'))
         mdextensions = ['pymdownx.details']
         md = markdown.Markdown(extensions=mdextensions)
 
@@ -52,6 +57,19 @@ def load(app):
         """
         dir_path = os.path.dirname(os.path.realpath(__file__))
         content_path = os.path.join(dir_path, 'pages', 'faq.md')
+        mdextensions = ['pymdownx.details']
+        md = markdown.Markdown(extensions=mdextensions)
+
+        return render_template('page_content.html', content=md.convert(open(content_path).read()))
+
+    @app.route("/getting-started")
+    def page_gettingstarted():
+        """
+        render page by python-markdown with md-extentions
+        :return: template
+        """
+        dir_path = os.path.dirname(os.path.realpath(__file__))
+        content_path = os.path.join(dir_path, 'pages', 'getting-started.md')
         mdextensions = ['pymdownx.details']
         md = markdown.Markdown(extensions=mdextensions)
 
