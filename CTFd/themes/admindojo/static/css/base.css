@@ -163,19 +163,16 @@ select.form-control {
 }
 .mainContainer {
     flex: 1 1 auto;
-    max-width: 100%;
-    padding: 40px 0;
+    padding: 20px 0;
 }
 .containerTraining {
     flex: 1 1 auto;
-    max-width: 100%;
-    padding: 40px 0;
-    margin-left: 20%;
-    margin-right: 20%;
+    padding: 20px 0;
+    font-size: 1.1rem;
 }
 .modal-lg {
 	  max-width: 1200px;
-  }
+}
 .indexlogo{
     padding: 5em 13em 1em; 
     display: flex;
