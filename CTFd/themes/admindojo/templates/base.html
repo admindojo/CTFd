@@ -62,20 +62,17 @@
 					<li class="nav-item">
 						<a class="nav-link" href="{{ url_for('challenges.listing') }}">Trainings</a>
 					</li>
+						<li class="nav-item">
+					</li>
+
 
 					<li class="nav-item dropdown">
 						<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
 						   aria-haspopup="true"
 						   aria-expanded="true">Instructions</a>
 						<div class="dropdown-menu">
-							{% for page in get_user_page_menu_bar() %}
-							{% if page.route.startswith('http://') or page.route.startswith('https://') %}
-							<a class="dropdown-item" href="{{ page.route }}">{{ page.title }}</a>
-							{% else %}
-							<a class="dropdown-item" href="{{  url_for('views.static_html', route=page.route) }}">{{
-								page.title
-								}}</a>
-							{% endif %}
+							{% for page in make_tree() %}
+							    <a class="dropdown-item" href="{{ url_for('page_trainings', training=page) }}">{{ page.split(".")[0] | replace('-', ' ')  | title }}</a>
 							{% endfor %}
 						</div>
 					</li>
