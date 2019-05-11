@@ -18,19 +18,19 @@ Create an GitHub Issue or send a mail: feedback@admindojo.org
 
 ### privacy
 
-#### marketing & tracking
+**marketing & tracking**
 
 adminDōjō doesn't use any tracking tools.
 
-#### cookies
+**cookies**
 
 adminDōjō does store a login cookie on your local computer to save your login status.
 
-#### email
+**email**
 
 adminDōjō used sendgrid to send you emails when registered. 
 
-#### logs
+**logs**
 
 adminDōjō stores logs with your IP for debugging and security reasons. Nothing gets used for marketing.
 
