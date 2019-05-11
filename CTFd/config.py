@@ -217,7 +217,7 @@ class Config(object):
         Specifies what path CTFd is mounted under. It can be used to run CTFd in a subdirectory.
         Example: /ctfd
     '''
-    REVERSE_PROXY = os.getenv("REVERSE_PROXY") or False
+    REVERSE_PROXY = os.getenv("REVERSE_PROXY") or '1,1,0,0,0' 
     TEMPLATES_AUTO_RELOAD = (not os.getenv("TEMPLATES_AUTO_RELOAD"))  # Defaults True
     SQLALCHEMY_TRACK_MODIFICATIONS = os.getenv("SQLALCHEMY_TRACK_MODIFICATIONS") is not None  # Defaults False
     SWAGGER_UI = '/' if os.getenv("SWAGGER_UI") is not None else False  # Defaults False
