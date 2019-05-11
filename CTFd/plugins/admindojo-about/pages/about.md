@@ -14,3 +14,24 @@ adminDōjō does not own, sell and distribute these tools and is not associated 
 adminDōjō is a hobby project by marvin heimbrodt.
 Feeback is highly appreciated!
 Create an GitHub Issue or send a mail: feedback@admindojo.org
+
+
+## privacy
+
+### marketing & tracking
+
+adminDōjō doesn't use any tracking tools
+
+### cookies
+
+adminDōjō does store a login cookie on your local computer to save your login status.
+
+### email
+
+adminDōjō used sendgrid to send you emails when registered. 
+
+### logs
+
+adminDōjō stores logs with your IP for debugging and security reasons. Nothing gets used for marketing.
+
+
