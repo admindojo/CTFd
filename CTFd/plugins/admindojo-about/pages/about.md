@@ -2,7 +2,7 @@ adminDōjō is a game style, interactive Linux tutorial for junior sysadmins.
 It utilizes third-party tools to provide a free, real-world training environment for everybody.
 
 
-The teaching enviroment consists of the following tools:
+The teaching environment consists of the following tools:
 
 - InSpec by Chef - Compliance testing framework - License: Apache License 2.0 (only up to version <4.0!)
 - Vagrant by HashiCorp Easy-to-use workflow to build VM environments- License: MIT
@@ -11,8 +11,11 @@ The teaching enviroment consists of the following tools:
 adminDōjō does not own, sell and distribute these tools and is not associated or connected with any of these tools/companies.
 
 
-adminDōjō is a hobby project by marvin heimbrodt.
+adminDōjō is a hobby project by [marvin heimbrodt](https://github.com/6uhrmittag).
+
 Feeback is highly appreciated!
+
+
 Create an GitHub Issue or send a mail: feedback@admindojo.org
 
 
