@@ -47,6 +47,6 @@ adminDōjō used sendgrid to send you emails when registered.
 
 **logs**
 
-adminDōjō stores logs with your IP for debugging and security reasons. Nothing gets used for marketing.
+adminDōjō stores logs with your IP for tracking the highscore, debugging and security reasons. Nothing gets used for marketing.
 
 
