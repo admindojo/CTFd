@@ -20,9 +20,9 @@ def sendmail(addr, text):
 
 def forgot_password(email, team_name):
     token = serialize(team_name)
-    text = """Hi! \n Did you initiate a password reset for your {ctf_name} account? Click the following link to reset your password:
+    text = """Hi! \n Did you initiate a password reset for your admindojo.org account? Click the following link to reset your password:
 
-{url}/{token}\n\n\nMarvin from admindojo.org
+{url}/{token} \n\n\n Marvin from admindojo.org
 """.format(ctf_name=get_config('ctf_name'), url=url_for('auth.reset_password', _external=True), token=token)
 
     return sendmail(email, text)
@@ -30,8 +30,8 @@ def forgot_password(email, team_name):
 
 def verify_email_address(addr):
     token = serialize(addr)
-    text = """Hi!\nLooks like you just created an account for admindojo.org\n
-    Please click the following link to confirm your email address: {url}/{token}\n\nHave fun!\nMarvin from admindojo.org""".format(
+    text = """Hi! \n \n Looks like you just created an account for admindojo.org \n
+    Please click the following link to confirm your email address: {url}/{token} \n \n Have fun!\n \n Marvin from admindojo.org""".format(
         ctf_name=get_config('ctf_name'),
         url=url_for('auth.confirm', _external=True),
         token=token
@@ -40,7 +40,7 @@ def verify_email_address(addr):
 
 
 def user_created_notification(addr, name, password):
-    text = """An account has been created for you for {ctf_name} at {url}. \n\nUsername: {name}\nPassword: {password}\n\nHave fun!\nMarvin from admindojo.org""".format(
+    text = """An account has been created for you for {ctf_name} at {url}. \n\nUsername: {name}\nPassword: {password} \n\n Have fun! \n Marvin from admindojo.org""".format(
         ctf_name=get_config('ctf_name'),
         url=url_for('views.static_html', _external=True),
         name=name,
