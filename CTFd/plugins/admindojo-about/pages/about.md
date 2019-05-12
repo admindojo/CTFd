@@ -22,7 +22,7 @@ Create an GitHub Issue or send a mail: feedback@admindojo.org
 
 All trainings are [fully open source](https://github.com/admindojo/admindojo-training) under MIT license.
 
-Trainings consists of::
+Trainings consists of:
 
 - a vagrantfile/overrides for admindojo baseimage
 - instructions (newbie friendly)
