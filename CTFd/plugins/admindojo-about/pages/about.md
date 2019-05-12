@@ -18,6 +18,18 @@ Feeback is highly appreciated!
 
 Create an GitHub Issue or send a mail: feedback@admindojo.org
 
+### creating trainings
+
+All trainings are [fully open source](https://github.com/admindojo/admindojo-training) under MIT license.
+
+Trainings consists of::
+
+- a vagrantfile/overrides for admindojo baseimage
+- instructions (newbie friendly)
+- InSpec profile
+- test scripts that solves most of a training automatically(for testing)
+
+Use this boilr template to generate a training: [admindojo/boilr-templates](https://github.com/admindojo/boilr-templates)
 
 ### privacy
 
