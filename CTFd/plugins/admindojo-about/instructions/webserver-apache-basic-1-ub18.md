@@ -1,5 +1,5 @@
 <div class="jumbotron">
-<h1>Training ID: webserver-apache-ub18-basic-1</h1>
+<h1>Training ID: webserver-apache-basic-1-ub18</h1>
 </div>
 
 Setup a basic web server with HTTP and HTTPS serve a static HTML file.
