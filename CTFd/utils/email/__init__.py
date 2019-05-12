@@ -11,9 +11,9 @@ EMAIL_REGEX = r"(^[^@\s]+@[^@\s]+\.[^@\s]+$)"
 
 def sendmail(addr, text):
     provider = get_mail_provider()
-    if provider == 'smtp':
+    if provider == "smtp":
         return smtp.sendmail(addr, text)
-    if provider == 'mailgun':
+    if provider == "mailgun":
         return mailgun.sendmail(addr, text)
     return False, "No mail settings configured"
 
@@ -54,10 +54,10 @@ def check_email_format(email):
 
 
 def check_email_is_whitelisted(email_address):
-    local_id, _, domain = email_address.partition('@')
-    domain_whitelist = get_config('domain_whitelist')
+    local_id, _, domain = email_address.partition("@")
+    domain_whitelist = get_config("domain_whitelist")
     if domain_whitelist:
-        domain_whitelist = [d.strip() for d in domain_whitelist.split(',')]
+        domain_whitelist = [d.strip() for d in domain_whitelist.split(",")]
         if domain not in domain_whitelist:
             return False
     return True
