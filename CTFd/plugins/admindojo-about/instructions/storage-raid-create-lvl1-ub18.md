@@ -61,7 +61,7 @@ But, in case they don't like Btrfs, they only want to convert the filesystem wit
     As long as the sysadmin is aware of the [known issues](https://wiki.debian.org/Btrfs#Warnings), the functional features outweigh the disadvantages of older filesystems like ext4. 
     
     Using Brtfs with RAID is an example of these known issues and shows why it's important to check the [Btrfs Statuspage](https://btrfs.wiki.kernel.org/index.php/Status). Even though Btfs is capable of setting up a RAID itself - the implementation is not fully developed. 
-    By checking the [Statuspage](https://btrfs.wiki.kernel.org/index.php/Status), you'll find RAID0, RAID1 and RAID10 marked as stable and RAID56 as unstable. Futher reading of the page also reveals "reading from mirrors in parallel can be optimized further".
+    By checking the [Statuspage](https://btrfs.wiki.kernel.org/index.php/Status), you'll find RAID0, RAID1 and RAID10 marked as stable and RAID56 as unstable. Futher reading reveals the sidenote "reading from mirrors in parallel can be optimized further".
     
     One strategy to use Btrfs but avoid any issues of its RAID-feature is to not use the build-in RAID capability and relay on stable implementations like mdadm. 
     This strategy is also used in this training.
