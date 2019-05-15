@@ -1,5 +1,5 @@
 <div class="jumbotron">
-    <h1 class="display-4 text-left">Training ID: storage-raid-create-lvl1-ub18</h1>
+    <h1 class="display-4 text-left">storage-raid-create-lvl1-ub18</h1>
     <p class="lead text-left">Create a level 1 raid from empty disks</p>
 </div>
 
