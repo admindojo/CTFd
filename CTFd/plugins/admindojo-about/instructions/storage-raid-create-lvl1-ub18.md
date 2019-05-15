@@ -3,8 +3,6 @@
     <p class="lead text-left">Create a level 1 raid from empty disks</p>
 </div>
 
-Create a level 1 raid from empty disks
-
 <h2 class="display-4">Scenario</h2>
 
 Your customer got a new Ubuntu 18 Server with two additional disks. The customer needs a new directory at `\data` to store important files. 
