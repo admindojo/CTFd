@@ -1,34 +1,35 @@
 <div class="jumbotron">
-<h1>Training ID: storage-raid-create-lvl1-ub18</h1>
+    <h1 class="display-4 text-left">Training ID: storage-raid-create-lvl1-ub18</h1>
+    <p class="lead text-left">Create a level 1 raid from empty disks</p>
 </div>
 
 Create a level 1 raid from empty disks
 
-## Scenario
+<h2 class="display-4">Scenario</h2>
 
 Your customer got a new Ubuntu 18 Server with two additional disks. The customer needs a new directory at `\data` to store important files. 
 
 All data inside this directory should be stored on a RAID 1 utilizing the additional disks. Your colleagues are familiar with RAID but want to try Btrfs as filesystem.
 But, in case they don't like Btrfs, they only want to convert the filesystem without changing the RAID.
 
-## Objectives
+<h2 class="display-4">Objectives</h2>
 
 - identify the two additional disks
 - create a software RAID 1
 - format and mount the RAID according to your instructions
 - make sure the mount persists across reboots (reboot via `vagrant reload` inside the training directory)
 
-## Notes
+            <h2 class="display-4">Notes</h2>
 
 - Please reboot your VM via `vagrant reload` inside the training directory - not `reboot` -  to [mount required directories](https://github.com/hashicorp/vagrant/issues/1845)
 - In case your VM doesn't boot anymore or the HDDs are broken just run `vagrant destroy` followed by `vagrant up` to delete the VM and start over
 - After finishing the training, please remove all files in `storage-raid-create-lvl1-ub18/tmp` manually
 
-## Detailed explanation (spoilers)
+<h2 class="display-4">Walktrhough</h2>
 
-### partitioning
+??? lead "partitioning"
 
-??? note "Click to open"
+    <div class="alert alert-secondary" role="alert">
 
     Disks are organized in partitions. Partitions than have a filesystem that is used to store the files.
     
@@ -40,9 +41,11 @@ But, in case they don't like Btrfs, they only want to convert the filesystem wit
     
     While fdisk can be used for partitioning as well, cfdisk provides a simple graphical interface.
     
-### filesystem: btrfs
-
-??? note "Click to open"
+    </div>
+    
+??? lead "filesystem: btrfs"
+    
+    <div class="alert alert-secondary" role="alert">
 
     btrfs is a modern filesystem for Linux that implements advanced features like:
     
@@ -77,13 +80,11 @@ But, in case they don't like Btrfs, they only want to convert the filesystem wit
     - [Companies that use Btrfs in production](https://btrfs.wiki.kernel.org/index.php/Production_Users)
     - [List of Btrfs features including development status](https://btrfs.wiki.kernel.org/index.php/Status)
     
+    </div>
 
+??? lead "fstab"
 
-### fstab
-
-
-??? note "Click to open"
-
+    <div class="alert alert-secondary" role="alert">
     
     To quote [fstab(5)](http://man7.org/linux/man-pages/man5/fstab.5.html):
     
@@ -123,13 +124,12 @@ But, in case they don't like Btrfs, they only want to convert the filesystem wit
     - [systemd.automount](https://www.freedesktop.org/software/systemd/man/systemd.automount.html)
     - [Anatomy of the Linux file system](https://www.ibm.com/developerworks/linux/library/l-linux-filesystem/)
 
+    </div>
 
-
-
-### mdadm
-
-??? note "Click to open"
+??? lead "mdadm"
     
+    <div class="alert alert-secondary" role="alert">
+        
     Creating a software RAID with mdadm is pretty straight forward. The command needed for this training is even included in the [mdadm man page](https://linux.die.net/man/8/mdadm).
     
     Be aware that a RAID can prevent data loss - but fixing a broken RAID can be complex.
@@ -143,3 +143,4 @@ But, in case they don't like Btrfs, they only want to convert the filesystem wit
     - [Linux Raid Wiki - A guide to mdadm](https://raid.wiki.kernel.org/index.php/A_guide_to_mdadm)
     - [Tips on RAID/mdadm maintainance](https://raid.wiki.kernel.org/index.php/Detecting,_querying_and_testing)
 
+    </div>

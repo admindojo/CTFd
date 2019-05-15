@@ -1,21 +1,20 @@
 <div class="jumbotron">
-<h1>Training ID: webserver-apache-basic-1-ub18</h1>
+    <h1 class="display-4 text-left">Training ID: webserver-apache-basic-1-ub18</h1>
+    <p class="lead text-left">Setup a basic web server with HTTP and HTTPS serve a static HTML file</p>
 </div>
 
-Setup a basic web server with HTTP and HTTPS serve a static HTML file.
 
-## Objectives
+<h2 class="display-4">Objectives</h2>
 1. setup a apache web server with default configuration
 2. serve a website that contains `Hello World!`as landing-page (plaintext, no need for HTML).
 3. make your website accessible via SSL (a simple selfsigned-snakeoil cert is ok)
 
-## Detailed explanation (spoilers)
 
+<h2 class="display-4">Walktrhough</h2>
 
-### About Apache
+??? lead "About Apache"
 
-??? note "Click to open"
-
+    <div class="alert alert-secondary" role="alert">
     
     The Apache HTTP Server or short just *Apache* is one of the internets first, and most used, web server. Originally based on the *NCSA HTTPd* server, 
     you'll still find it referenced as *httpd*(**H**yper**t**ext **T**ransfer **P**rotocol **d**aemon).
@@ -36,12 +35,12 @@ Setup a basic web server with HTTP and HTTPS serve a static HTML file.
     - [An overview of popular Webservers](https://maccablo.com/web-servers-a-detailed-overview-popular-webservers/)
     - [Wikipedia: LAMP](https://en.wikipedia.org/wiki/LAMP_(software_bundle))
 
-
-### Starting and controlling apache
-
-??? note "Click to open"
-
+    </div>
     
+??? lead "Starting and controlling apache"
+
+    <div class="alert alert-secondary" role="alert">
+        
     There are a few ways to manage programs in Linux. To understand older tutorials and books, you should know some of them.
     The full story is quite complex and an interesting read for later. For now, just remember that 
     `systemctrl` should always do the trick. 
@@ -62,11 +61,12 @@ Setup a basic web server with HTTP and HTTPS serve a static HTML file.
     - [Discussion: Difference between systemctl init.d and service](https://askubuntu.com/a/911543)
     - [Commands SysVinit vs Systemd ](https://fedoraproject.org/wiki/SysVinit_to_Systemd_Cheatsheet)
 
+    </div>
 
-### Accessing websites from terminal
-
-??? note "Click to open"
+??? lead "Accessing websites from terminal"
     
+    <div class="alert alert-secondary" role="alert">
+        
     Since you're in a terminal, you'll have to judge the status of websites by text-information only. There are a few tools for that e.g. :
     
     - curl: a tool that can handle almost every internet-related protocol
@@ -81,3 +81,5 @@ Setup a basic web server with HTTP and HTTPS serve a static HTML file.
     External resources
     - [HTTP headers - by Mozilla](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers)  
     - [HTTP response status codes - by Mozilla](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
+    
+    </div>
