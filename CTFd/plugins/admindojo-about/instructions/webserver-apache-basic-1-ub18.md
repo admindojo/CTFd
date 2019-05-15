@@ -10,7 +10,7 @@
 3. make your website accessible via SSL (a simple selfsigned-snakeoil cert is ok)
 
 
-<h2 class="display-4">Walktrhough</h2>
+<h2 class="display-4">Walkthrough</h2>
 
 ??? lead "About Apache"
 

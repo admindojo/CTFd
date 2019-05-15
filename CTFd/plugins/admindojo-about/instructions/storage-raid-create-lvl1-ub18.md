@@ -23,7 +23,7 @@ But, in case they don't like Btrfs, they only want to convert the filesystem wit
 - In case your VM doesn't boot anymore or the HDDs are broken just run `vagrant destroy` followed by `vagrant up` to delete the VM and start over
 - After finishing the training, please remove all files in `storage-raid-create-lvl1-ub18/tmp` manually
 
-<h2 class="display-4">Walktrhough</h2>
+<h2 class="display-4">Walkthrough</h2>
 
 ??? lead "partitioning"
 
