@@ -1,15 +1,15 @@
-adminDōjō provides an **easy to setup environment** to train **real-world Linux administration tasks** in preconfigured VirtualMachines.
+admindōjō provides an **easy to setup environment** to train **real-world Linux administration tasks** in preconfigured VirtualMachines.
 
 Each training contains a real-world scenario and in-depth explanations.
 
 
 Each training gets verified and rated - this way you know exactly if you implemented best-practices.
 
-To help motivating yourself, adminDōjō allows you to track your progress online and compete with others!
+To help motivating yourself, admindōjō allows you to track your progress online and compete with others!
 
-**adminDōjō is not just a simulation**!
+**admindōjō is not just a simulation**!
 
-adminDōjō uses unmodified Linux images and real-world objectives - everything that you learn is fully applicable to a standard Linux installation! 
+admindōjō uses unmodified Linux images and real-world objectives - everything that you learn is fully applicable to a standard Linux installation! 
 
 ## Getting started 
 
@@ -29,7 +29,7 @@ adminDōjō uses unmodified Linux images and real-world objectives - everything 
 
 
 ### Install required tools
-adminDōjō utilizes some third-party tools: 
+admindōjō utilizes some third-party tools: 
 
 1. [install VirtualBox](https://www.virtualbox.org/)
 2. [install Vagrant](https://www.vagrantup.com/downloads.html)
@@ -57,7 +57,7 @@ You do need to [register](https://admindojo.org/register) at admindojo.org to tr
 
 ## Usage
 ### General
-adminDōjō heavily utilizes [Vagrant](https://www.vagrantup.com) thus starting and rebooting the VM differs from normal operation:
+admindōjō heavily utilizes [Vagrant](https://www.vagrantup.com) thus starting and rebooting the VM differs from normal operation:
 
 - Use `vagrant ssh` to login/jump into the VM
 - You exit the VM with _cms+D_ or `exit`
@@ -92,7 +92,7 @@ Your user with sudo permission:
 
 In case you are familiar with vagrant and ssh you can SSH directly to your admindojo box(SSH could require changes to the Vagrantfile depending on the Box Version).
 
-Since adminDōjō uses real-world tools under the hood you're able to use their native functions:
+Since admindōjō uses real-world tools under the hood you're able to use their native functions:
 
 - Vagrant 
     - [Official documentation](https://www.vagrantup.com/docs/cli/)

@@ -1,4 +1,4 @@
-adminDōjō is a game style, interactive Linux tutorial for junior sysadmins. 
+admindōjō is a game style, interactive Linux tutorial for junior sysadmins. 
 It utilizes third-party tools to provide a free, real-world training environment for everybody.
 
 
@@ -8,10 +8,10 @@ The teaching environment consists of the following tools:
 - Vagrant by HashiCorp Easy-to-use workflow to build VM environments- License: MIT
 - Virtualbox by Oracle - Powerful virtualization for enterprise as well as home use - License: GPLv2
 
-adminDōjō does not own, sell and distribute these tools and is not associated or connected with any of these tools/companies.
+admindōjō does not own, sell and distribute these tools and is not associated or connected with any of these tools/companies.
 
 
-adminDōjō is a hobby project by [marvin heimbrodt](https://github.com/6uhrmittag).
+admindōjō is a hobby project by [marvin heimbrodt](https://github.com/6uhrmittag).
 
 Feeback is highly appreciated!
 
@@ -35,18 +35,18 @@ Use this boilr template to generate a training: [admindojo/boilr-templates](http
 
 **marketing & tracking**
 
-adminDōjō doesn't use any tracking tools.
+admindōjō doesn't use any tracking tools.
 
 **cookies**
 
-adminDōjō does store a login cookie on your local computer to save your login status.
+admindōjō does store a login cookie on your local computer to save your login status.
 
 **email**
 
-adminDōjō used sendgrid to send you emails when registered. 
+admindōjō used sendgrid to send you emails when registered. 
 
 **logs**
 
-adminDōjō stores logs with your IP for tracking the highscore, debugging and security reasons. Nothing gets used for marketing.
+admindōjō stores logs with your IP for tracking the highscore, debugging and security reasons. Nothing gets used for marketing.
 
 
