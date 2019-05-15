@@ -17,7 +17,7 @@ But, in case they don't like Btrfs, they only want to convert the filesystem wit
 - format and mount the RAID according to your instructions
 - make sure the mount persists across reboots (reboot via `vagrant reload` inside the training directory)
 
-            <h2 class="display-4">Notes</h2>
+<h2 class="display-4">Notes</h2>
 
 - Please reboot your VM via `vagrant reload` inside the training directory - not `reboot` -  to [mount required directories](https://github.com/hashicorp/vagrant/issues/1845)
 - In case your VM doesn't boot anymore or the HDDs are broken just run `vagrant destroy` followed by `vagrant up` to delete the VM and start over
