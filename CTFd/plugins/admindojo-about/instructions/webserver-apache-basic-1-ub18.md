@@ -29,6 +29,7 @@
     - and an interpreter to create dynamic websites (without it, a web server usually just serves HTML content only)
     
     External resources
+    
     - [Apache's website](https://httpd.apache.org/)
     - [nginx's website](https://www.nginx.com/resources/wiki/)
     - [nginx's take on "nginx vs. apache"](https://www.nginx.com/blog/nginx-vs-apache-our-view/)
@@ -58,6 +59,7 @@
     - Not all programs are stating automatically during the system start-up. Use `sudo systemctl enable programX` to enable the autostart.
     
     External resources
+    
     - [Discussion: Difference between systemctl init.d and service](https://askubuntu.com/a/911543)
     - [Commands SysVinit vs Systemd ](https://fedoraproject.org/wiki/SysVinit_to_Systemd_Cheatsheet)
 
@@ -79,6 +81,7 @@
     
     
     External resources
+    
     - [HTTP headers - by Mozilla](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers)  
     - [HTTP response status codes - by Mozilla](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
     
