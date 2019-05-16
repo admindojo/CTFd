@@ -53,5 +53,5 @@ admindōjō uses sendgrid to send you emails when creating a new account. (see [
 
 <h3 class="lead">hosting</h3>
 
-admindōjō uses microsoft azure to host the website. This means that microsoft sees your IP when visiting admindojo.org. ([see [gdprtracker.io]](https://gdprtracker.io/compliance/microsoft-azure/) for more information) 
+admindōjō uses microsoft azure to host this website. This means that microsoft sees your IP when visiting admindojo.org. (see [gdprtracker.io](https://gdprtracker.io/compliance/microsoft-azure/) for more information) 
 
