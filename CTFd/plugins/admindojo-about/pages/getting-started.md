@@ -32,7 +32,7 @@ admindōjō utilizes some third-party tools:
 4. clone training-repository `git clone https://github.com/admindojo/admindojo-training.git`
     - it is also possible to just [download the trainings](https://github.com/admindojo/admindojo-training/archive/master.zip) - but git provides easier updates via `git pull` 
 
-<h3 class="lead">start training</h3>
+<h3 class="lead">Start training</h3>
 
 1. Open Powershell(Windows) or Terminal(Mac&Linux)
 2. Change into cloned repository
@@ -45,7 +45,7 @@ admindōjō utilizes some third-party tools:
 6. Run `admindojo` for instructions
 
 
-<h3 class="lead">Tracking progress at admindojo.org</h3>
+<h3 class="lead">Track progress at admindojo.org</h3>
 
 To track your progress online, you'll get a `token` after completing a training. Go to [challenges](https://admindojo.org/challenges), open a training and submit the `token`.
 
