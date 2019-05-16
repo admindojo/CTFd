@@ -19,7 +19,7 @@ applicable to a standard Linux installation! </p>
 - 10-20GB HDD for VMs
 - 1-2GB RAM for VMs
 - Internet connection to download VMs (~500MB once + 50-100MB per training)
-- Due to the usage of VirtualBox, you can't run Docker or Hyper-V in parallel with VirtualBox. See [Vagrants documentation](https://www.vagrantup.com/docs/installation/)
+- Due to the usage of VirtualBox, you can't run Docker or Hyper-V in parallel with VirtualBox(See [Vagrants documentation](https://www.vagrantup.com/docs/installation/)).
 
 
 <h3 class="lead">Install required tools</h3>
