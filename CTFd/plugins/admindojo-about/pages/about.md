@@ -4,9 +4,9 @@ It utilizes third-party tools to provide a free, real-world training environment
 
 The teaching environment consists of the following tools:
 
-- InSpec by Chef - Compliance testing framework - License: Apache License 2.0 (only up to version <4.0!)
-- Vagrant by HashiCorp Easy-to-use workflow to build VM environments- License: MIT
-- Virtualbox by Oracle - Powerful virtualization for enterprise as well as home use - License: GPLv2
+- [InSpec by Chef](https://www.inspec.io) - Compliance testing framework - License: Apache License 2.0 (only up to version <4.0!)
+- [Vagrant by HashiCorp](https://www.vagrantup.com/) - Easy to-use workflow to build VM environments- License: MIT
+- [Virtualbox by Oracle](https://www.virtualbox.org/) - Powerful virtualization for enterprise as well as home use - License: GPLv2
 
 admindōjō does not own, sell and distribute these tools and is not associated or connected with any of these tools/companies.
 
