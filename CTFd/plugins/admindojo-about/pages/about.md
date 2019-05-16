@@ -49,6 +49,6 @@ admindōjō used sendgrid to send you emails when registered.
 
 <h3 class="lead">logs</h3>
 
-admindōjō stores logs with your IP for tracking the highscore, debugging and security reasons. Nothing gets used for marketing.
+admindōjō stores logs with your IP for tracking the highscore/anti-cheat, debugging and security reasons. Nothing gets used for marketing.
 
 
