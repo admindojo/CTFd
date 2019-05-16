@@ -37,18 +37,21 @@ create a training: [documentation@Github](https://github.com/admindojo/admindojo
 
 <h3 class="lead">marketing & tracking</h3>
 
-admindōjō doesn't use any tracking tools.
+admindōjō doesn't use any tracking tools for marketing purposes.
 
 <h3 class="lead">cookies</h3>
 
 admindōjō does store a login cookie on your local computer to save your login status.
 
-<h3 class="lead">email</h3>
-
-admindōjō used sendgrid to send you emails when registered. 
-
 <h3 class="lead">logs</h3>
 
 admindōjō stores logs with your IP for tracking the highscore/anti-cheat, debugging and security reasons. Nothing gets used for marketing.
 
+<h3 class="lead">email</h3>
+
+admindōjō uses sendgrid to send you emails when creating a new account. (see [gdprtracker.io](https://gdprtracker.io/compliance/sendgrid/) for more information)
+
+<h3 class="lead">hosting</h3>
+
+admindōjō uses microsoft azure to host the website. This means that microsoft sees your IP when visiting admindojo.org. ([see [gdprtracker.io]](https://gdprtracker.io/compliance/microsoft-azure/) for more information) 
 
