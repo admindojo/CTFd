@@ -1,6 +1,6 @@
-admindōjō is a game style, interactive Linux tutorial for junior sysadmins. 
+<p class="lead">admindōjō is a game style, interactive Linux tutorial for junior sysadmins. 
 It utilizes third-party tools to provide a free, real-world training environment for everybody.
-
+</p>
 
 The teaching environment consists of the following tools:
 
@@ -18,7 +18,7 @@ Feeback is highly appreciated!
 
 Create an GitHub Issue or send a mail: feedback@admindojo.org
 
-### creating trainings
+<h3 class="lead">creating trainings</h3>
 
 All trainings are [fully open source](https://github.com/admindojo/admindojo-training) under MIT license.
 
@@ -29,23 +29,25 @@ Trainings consists of:
 - InSpec profile
 - test scripts that solves most of a training automatically(for testing)
 
-Use this boilr template to generate a training: [admindojo/boilr-templates](https://github.com/admindojo/boilr-templates)
+sumbit a training idea: [issue@Github](https://github.com/admindojo/admindojo-training/issues)
 
-### privacy
+create a training: [documentation@Github](https://github.com/admindojo/admindojo-training/blob/master/admindojo/development/Readme.md) 
 
-**marketing & tracking**
+<h2 class="display-4">privacy</h2>
+
+<h3 class="lead">marketing & tracking</h3>
 
 admindōjō doesn't use any tracking tools.
 
-**cookies**
+<h3 class="lead">cookies</h3>
 
 admindōjō does store a login cookie on your local computer to save your login status.
 
-**email**
+<h3 class="lead">email</h3>
 
 admindōjō used sendgrid to send you emails when registered. 
 
-**logs**
+<h3 class="lead">logs</h3>
 
 admindōjō stores logs with your IP for tracking the highscore, debugging and security reasons. Nothing gets used for marketing.
 
