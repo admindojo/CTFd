@@ -11,7 +11,7 @@ applicable to a standard Linux installation! </p>
 3. Start the preconfigured VM
 4. Read the objectives and implement them
 5. Run `admindojo check ` to verify your solution
-
+6. Track your progress at admindojo.org(optional)
 
 <h3 class="lead">Requirements</h3>
 
