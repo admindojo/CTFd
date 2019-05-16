@@ -18,7 +18,7 @@ Feeback is highly appreciated!
 
 Create an GitHub Issue or send a mail: feedback@admindojo.org
 
-<h3 class="lead">creating trainings</h3>
+<h2 class="display-4">creating trainings</h2>
 
 All trainings are [fully open source](https://github.com/admindojo/admindojo-training) under MIT license.
 
