@@ -83,4 +83,4 @@ def load(app):
         """
         dir_path = os.path.dirname(os.path.realpath(__file__))
 
-        return send_from_directory(dir_path, request.path[1:])
+        return send_from_directory(dir_path, 'robots.txt')
