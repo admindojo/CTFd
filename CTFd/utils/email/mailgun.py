@@ -16,7 +16,7 @@ def sendmail(addr, text):
             data={
                 "from": "{} Admin <{}>".format(ctf_name, mailfrom_addr),
                 "to": [addr],
-                "subject": "Message from {0}".format(ctf_name),
+                "subject": "Message from {0}".format('admindojo.org'),
                 "text": text,
             },
             timeout=1.0,
