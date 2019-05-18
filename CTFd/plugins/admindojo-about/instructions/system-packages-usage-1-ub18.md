@@ -18,6 +18,9 @@ He want you fix this and a few other things:
   - Please make a backup of this file to /etc/crontab.backup and install the original file that came with Ubuntu
 - to prevent the system to ask which editor should be used, please remove `nano`
 
+<h2 class="display-4">Notes</h2>
+
+- The fist boot will take a few minutes to prepare
 
 <h2 class="display-4">Walkthrough</h2>
 
