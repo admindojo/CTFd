@@ -20,23 +20,32 @@ def sendmail(addr, text):
 
 def forgot_password(email, team_name):
     token = serialize(team_name)
-    text = """Hi! \n Did you initiate a password reset for your admindojo.org account? Click the following link to reset your password:
-
-{url}/{token} \n\n\n Marvin from admindojo.org
-""".format(ctf_name=get_config('ctf_name'), url=url_for('auth.reset_password', _external=True), token=token)
+    text = """Hi!\n
+    Did you initiate a password reset for your admindojo.org account?\n
+    Click the following link to reset your password:\n
+    {url}/{token}\n\n\n
+    Marvin from admindojo.org\n\n\n\n
+    This email was send from admindojo.org. If you didn't try to reset your password, please ignore this email or let us know at info@admindojo.org""".format(
+        ctf_name=get_config('ctf_name'), url=url_for('auth.reset_password', _external=True), token=token)
 
     return sendmail(email, text)
 
 
 def verify_email_address(addr):
     token = serialize(addr)
-    text = """Hi! \n \n Looks like you just created an account for admindojo.org \n
-    Please click the following link to confirm your email address: {url}/{token} \n \n Have fun!\n \n Marvin from admindojo.org""".format(
+    text = """Hi!\n\n
+    Looks like you just created an account for admindojo.org \n
+    Please click the following link to confirm your email address:
+    {url}/{token}\n\n
+    Have fun!\n\n
+    Marvin from admindojo.org\n\n\n\n
+    This email was send from admindojo.org. If you didn't try to create an account, please ignore this email or let us know at info@admindojo.org""".format(
         ctf_name=get_config('ctf_name'),
         url=url_for('auth.confirm', _external=True),
         token=token
     )
     return sendmail(addr, text)
+
 
 
 def user_created_notification(addr, name, password):
