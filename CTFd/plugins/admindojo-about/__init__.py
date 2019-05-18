@@ -1,4 +1,4 @@
-from flask import render_template, send_from_directory, request
+from flask import render_template, url_for
 import os
 import markdown
 from markdown.extensions import Extension
@@ -83,4 +83,4 @@ def load(app):
         """
         dir_path = os.path.dirname(os.path.realpath(__file__))
 
-        return send_from_directory(dir_path, 'robots.txt')
+        return url_for(dir_path, 'robots.txt')
