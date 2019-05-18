@@ -1,4 +1,4 @@
-from flask import render_template
+from flask import render_template, send_from_directory, request
 import os
 import markdown
 from markdown.extensions import Extension
@@ -74,3 +74,13 @@ def load(app):
         md = markdown.Markdown(extensions=mdextensions)
 
         return render_template('page_content.html', content=md.convert(open(content_path).read()))
+
+    @app.route('/robots.txt')
+    def static_from_root():
+        """
+        return robot.txt
+        :return: robot.txt
+        """
+        dir_path = os.path.dirname(os.path.realpath(__file__))
+
+        return send_from_directory(dir_path, request.path[1:])
