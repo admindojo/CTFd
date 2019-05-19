@@ -1,11 +1,11 @@
 <div class="jumbotron">
-    <h1 class="display-4 text-left">webserver-apache-basic-1-ub18</h1>
+    <h1 class="display-4 text-left">webserver-Apache-basic-1-ub18</h1>
     <p class="lead text-left">Setup a basic web server and serve a static HTML file via HTTP and HTTPS</p>
 </div>
 
 
 <h2 class="display-4">Objectives</h2>
-1. setup a apache web server with default configuration
+1. setup a Apache web server with default configuration
 2. serve a website that contains `Hello World!`as landing-page (plaintext, no need for HTML).
 3. make your website accessible via SSL (a simple selfsigned-snakeoil cert is ok)
 
@@ -16,13 +16,13 @@
 
     <div class="alert alert-secondary" role="alert">
     
-    The Apache HTTP Server or short just *Apache* is one of the internets first, and most used, web server. Originally based on the *NCSA HTTPd* server, 
+    The Apache HTTP Server or short just *Apache* is one of the internets first and most used, web server. Originally based on the *NCSA HTTPd* server, 
     you'll still find it referenced as *httpd*(**H**yper**t**ext **T**ransfer **P**rotocol **d**aemon).
     
-    One reason of it's popularity is the ability to quickly add features through dynamically loadable modules. However, this also makes it a bit 
-    clunky compared to alternatives like nginx, which is optimized for performance. 
+    One reason for its popularity is the ability to quickly add features through dynamically loadable modules. However, this also makes it a bit 
+    clunky compared to alternatives like Nginx, which is optimized for performance. 
     
-    Apache is also part of the popular *LAMP* Stack - which is a bundle of **L**inux, **A**pache, **M**ySQL, and **P**HP". Generally speaking this refers to installing:
+    Apache is also part of the popular *LAMP* Stack - which is a bundle of **L**inux, **A**pache, **M**ySQL, and **P**HP". Generally speaking, this refers to installing:
     - an operating system
     - a web server
     - a database
@@ -30,15 +30,15 @@
     
     External resources
     
-    - [Apache's website](https://httpd.apache.org/)
-    - [nginx's website](https://www.nginx.com/resources/wiki/)
-    - [nginx's take on "nginx vs. apache"](https://www.nginx.com/blog/nginx-vs-apache-our-view/)
-    - [An overview of popular Webservers](https://maccablo.com/web-servers-a-detailed-overview-popular-webservers/)
+    - [Apache's website](https://httpd.Apache.org/)
+    - [Nginx's website](https://www.Nginx.com/resources/wiki/)
+    - [Nginx's take on "Nginx vs. Apache"](https://www.Nginx.com/blog/Nginx-vs-Apache-our-view/)
+    - [An overview of popular Web servers](https://maccablo.com/web-servers-a-detailed-overview-popular-webservers/)
     - [Wikipedia: LAMP](https://en.wikipedia.org/wiki/LAMP_(software_bundle))
 
     </div>
     
-??? lead "Starting and controlling apache"
+??? lead "Starting and controlling Apache"
 
     <div class="alert alert-secondary" role="alert">
         
@@ -50,8 +50,8 @@
     - `sudo systemctl start programX` This is the modern and universal approach. Used by systemd - a system and service manager.
     
     
-    There is even an extra program to control apache:
-    - `sudo apache2ctrl start` Since Ubuntu 16.04 this is already replaced and liked to the `systemctl` command.
+    There is even an extra program to control Apache:
+    - `sudo Apache2ctrl start` Since Ubuntu 16.04 this is already replaced and liked to the `systemctl` command.
     
     
     Additional info:
@@ -75,7 +75,7 @@
     - lynx: a text-based web-browser. It can't handle complex/modern websites or technologies. But it'll give you a visual representation of the website
     
     Always keep in mind what information you're interested in. E.g:
-    - accessing "localhost" will only give you a status of the local web server. Users will access your web server via it's public IP or FQDN
+    - accessing "localhost" will only give you the status of the local web server. Users will access your web server via its public IP or FQDN
     - web servers will always send response status codes(e.g. 200 or 404). These codes are only visible in the HTTP header fields. Try `curl -v`
     - ports and protocols are important. When checking websites, also check what protocol(e.g. try `curl -v http://wikipedia.com:443`)
     

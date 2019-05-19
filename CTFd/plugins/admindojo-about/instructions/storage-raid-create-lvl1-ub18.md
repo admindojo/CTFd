@@ -7,7 +7,7 @@
 
 Your customer got a new Ubuntu 18 Server with two additional disks. The customer needs a new directory at `\data` to store important files. 
 
-All data inside this directory should be stored on a RAID 1 utilizing the additional disks. Your colleagues are familiar with RAID but want to try Btrfs as filesystem.
+All data inside this directory should be stored on a RAID 1 utilizing the additional disks. Your colleagues are familiar with RAID but want to try Btrfs as the filesystem.
 But, in case they don't like Btrfs, they only want to convert the filesystem without changing the RAID.
 
 <h2 class="display-4">Objectives</h2>
@@ -60,10 +60,10 @@ But, in case they don't like Btrfs, they only want to convert the filesystem wit
     Despite the development status of some features, Btrfs is sill used by many.
     As long as the sysadmin is aware of the [known issues](https://wiki.debian.org/Btrfs#Warnings), the functional features outweigh the disadvantages of older filesystems like ext4. 
     
-    Using Brtfs with RAID is an example of these known issues and shows why it's important to check the [Btrfs Statuspage](https://btrfs.wiki.kernel.org/index.php/Status). Even though Btfs is capable of setting up a RAID itself - the implementation is not fully developed. 
-    By checking the [Statuspage](https://btrfs.wiki.kernel.org/index.php/Status), you'll find RAID0, RAID1 and RAID10 marked as stable and RAID56 as unstable. Futher reading reveals the sidenote "reading from mirrors in parallel can be optimized further".
+    Using Brtfs with RAID is an example of these known issues and shows why it's important to check the [Btrfs Status page](https://btrfs.wiki.kernel.org/index.php/Status). Even though Btfs is capable of setting up a RAID itself - the implementation is not fully developed. 
+    By checking the [Status page](https://btrfs.wiki.kernel.org/index.php/Status), you'll find RAID0, RAID1 and RAID10 marked as stable and RAID56 as unstable. Further reading reveals the sidenote "reading from mirrors in parallel can be optimized further".
     
-    One strategy to use Btrfs but avoid any issues of its RAID-feature is to not use the build-in RAID capability and relay on stable implementations like mdadm. 
+    One strategy to use Btrfs but avoid any issues of its RAID-feature is to not use the built-in RAID capability and relay on stable implementations like mdadm. 
     This strategy is also used in this training.
     
     
@@ -94,15 +94,15 @@ But, in case they don't like Btrfs, they only want to convert the filesystem wit
     
     While modern distributions also allow dynamic mounting via [autofs](https://wiki.archlinux.org/index.php/autofs) or [systemd](https://www.freedesktop.org/software/systemd/man/systemd.automount.html), `\etc\fstab` is still the main source for permanent storage devices.
     
-    Adding mounts is pretty straight forward. Remember to use the UUID to identify partitions and use [blkid](https://linux.die.net/man/8/blkid) to get all informations needed.
+    Adding mounts is pretty straight forward. Remember to use the UUID to identify partitions and use [blkid](https://linux.die.net/man/8/blkid) to get all information needed.
     
     It is worth to check out all available `options` in [mount(8)](https://manpages.ubuntu.com/manpages/cosmic/en/man8/mount.8.html). It is always good to lookup options when copying from tutorials or other posts.
     Usually adding only `defaults` is fine(note that defaults are always included by default even if you don't add it. It's only needed because the options field can't be empty).
     
     */etc/fstab.d/?*
     
-    fstab.d is woth to talk about. Usually it's good practice to put additional configuration files in separate x*.d* directories in case they exist.
-    But even though a /etc/fstab.d/ directory can exist, a websearch shows that it's not 100% save to use. The main reasons are:
+    fstab.d is worth to talk about. Usually it's good practice to put additional configuration files in separate x*.d* directories in case they exist.
+    But even though a /etc/fstab.d/ directory can exist, a web search shows that it's not 100% save to use. The main reasons are:
     
     - /etc/fstab has a long history and other tools may only check this file for mounts
     - typically the file only contains a handful of entries
@@ -139,6 +139,6 @@ But, in case they don't like Btrfs, they only want to convert the filesystem wit
     - [mdadm(8) - Linux man page](https://linux.die.net/man/8/mdadm)
     - [Linux Raid Wiki](https://raid.wiki.kernel.org)
     - [Linux Raid Wiki - A guide to mdadm](https://raid.wiki.kernel.org/index.php/A_guide_to_mdadm)
-    - [Tips on RAID/mdadm maintainance](https://raid.wiki.kernel.org/index.php/Detecting,_querying_and_testing)
+    - [Tips on RAID/mdadm maintenance](https://raid.wiki.kernel.org/index.php/Detecting,_querying_and_testing)
 
     </div>

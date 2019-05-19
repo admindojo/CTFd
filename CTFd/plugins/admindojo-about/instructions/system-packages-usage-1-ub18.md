@@ -10,7 +10,7 @@ Your client just got a new Ubuntu server. He already installed Apache2, but deci
 
 He already tried to add the [nginx/development repository](https://nginx.org/en/linux_packages.html#Ubuntu) to get the Nginx version 1.5, but `apt get install nginx` didn't work.
 
-He want you fix this and a few other things:
+He wants you to fix this and a few other things:
 
 - install Nginx 1.5
 - remove Apache2 completely, including all files that were installed
@@ -20,7 +20,7 @@ He want you fix this and a few other things:
 
 <h2 class="display-4">Notes</h2>
 
-- The fist boot will take a few minutes to prepare
+- The first boot will take a few minutes to prepare
 
 <h2 class="display-4">Walkthrough</h2>
 
@@ -51,19 +51,19 @@ He want you fix this and a few other things:
 
     It is important to remember that software must be developed and maintained by people or companies and that it must come from _somewhere_.<br/><br/>
     In the case of Linux, we call the source of packages _Repositories_(short: Repo). Repositories often not only contain the finished tool, but also the source code, a bug tracker(a place to collect and manage software bugs) or wikis.<br/>
-    A repository is just a URL that Ubuntu/the package manager uses as a source for the tool. The repo maintainer will always distribute the latest updates via the Repo - by checking the URL via e.g. `apt update`, you always get notified about new versions.
+    A repository is just a URL that Ubuntu/the package manager uses as a source for the tool. The repo maintainer will always distribute the latest updates via the Repo - by checking the URL via an e.g. `apt update`, you always get notified about new versions.
 
     The _app store_ you find on modern distributions is just a graphical user interface to interact with these repositories and are just a _friendlier_ version of `apt`.
 
-    To make it easier to get the software, Linux distributions include a collection of repositories from the beginning. These repos often include system tools and very popular tools like the Apache webs erver.<br/><br/>
-    Because all distributions have their own quirks and features, the included repositories are often maintained by the maintainer of the distribution itself. In the case of Ubuntu it's the company [Canonical](https://www.canonical.com/). They maintain their repo at [packages.ubuntu.com](https://packages.ubuntu.com/).<br/>
+    To make it easier to get the software, Linux distributions include a collection of repositories from the beginning. These repos often include system tools and very popular tools like the Apache web server.<br/><br/>
+    Because all distributions have their own quirks and features, the included repositories are often maintained by the maintainer of the distribution itself. In the case of Ubuntu, it's the company [Canonical](https://www.canonical.com/). They maintain their repo at [packages.ubuntu.com](https://packages.ubuntu.com/).<br/>
     Since Ubuntu only includes its own repository, it also acts as a security feature. As long as [Canonical](https://www.canonical.com/) is under the control of the repository, a freshly installed Ubuntu can only install what [Canonical](https://www.canonical.com/) is distributing.
     They will also fix bugs that are specific to the distribution - but keep in mind that they usually not the original _inventor_ of these tools. The original source is called the _upstream_.<br/>
     [Launchpad.net](https://launchpad.net/) is a service to create public repositories for everyone. To install a tool from Launchpad, you need to add the tools repository URL to your system first.
 
     An Example:
 
-    The popular editor _nano_ was developed in the 90's as _pico_, [a clone was developed and called _nano_](https://www.nano-editor.org/dist/latest/faq.html#1.2).
+    The popular editor _nano_ was developed in the '90s as _pico_, [a clone was developed and called _nano_](https://www.nano-editor.org/dist/latest/faq.html#1.2).
     You'll find the source code at nano's website: [git.savannah.gnu.org/cgit/nano.git/log/](https://git.savannah.gnu.org/cgit/nano.git/log/) - but you can't just start nano from the raw text file, right?!<br/><br/>
     This is where a package repository comes in to play - but first, you need to know that Ubuntu is Debian-based and uses Debian packages as their _upstream_. So, [Canonical](https://www.canonical.com/) reuses Debian packages and may add/modify features to it. <br/>
     Debian includes nano in a [core repository](https://tracker.debian.org/pkg/nano) - some of nano's developers are also maintainer for the package in the Debian repository. They make sure it always includes the latest changes from the original upstream(nano's [own, official git repository](https://git.savannah.gnu.org/cgit/nano.git/log/)). [Canonical](https
@@ -76,7 +76,7 @@ He want you fix this and a few other things:
     - in case a repository is unmaintained, you won't get updates of the software
         - especially important when using _not so popular_ tools that don't have a big and active community
     - in case the development is too fast, the repository maintainer may can't keep up and provide _outdated_ versions in the repository
-        - e.g. Ubuntu Bionic only inlcudes [Nginx version 1.14](https://packages.ubuntu.com/bionic/nginx). In case you need the most recent version 1.15, you'll need to add the [repository maintained by Nginx](https://launchpad.net/~nginx/+archive/ubuntu/development)
+        - e.g. Ubuntu Bionic only includes [Nginx version 1.14](https://packages.ubuntu.com/bionic/nginx). In case you need the most recent version 1.15, you'll need to add the [repository maintained by Nginx](https://launchpad.net/~nginx/+archive/ubuntu/development)
     - when a tool is installed manually - and not through a repository - you do need to check for updates yourself and can't use _apt update_
 
     It's usually better to use official or community supported repositories then manually checking for updates.
@@ -94,7 +94,7 @@ He want you fix this and a few other things:
 
     Removing tools is very similar to installing them - you probably find all you need in the first section: _installing tools_.
 
-    It is important to check the output while removing a tool. You'll often find information about directories or files that didn't got deleted.
+    It is important to check the output while removing a tool. You'll often find information about directories or files that didn't get deleted.
     These files often hold configuration files or files that were modified by the user - the _uninstaller_ then warns you and helps you to keep these files. They must be either removed by hand or with a special option while uninstalling.
 
     Another note: When installing a tool, it often installs additional tools as a dependency. Sometimes the installer will also check for installed tools and add configuration files to the existing, already installed tools. To completely remove all configuration files check the output while removing and check out `apt autoremove`.<br /> <br />
