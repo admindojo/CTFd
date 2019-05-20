@@ -14,8 +14,7 @@ He wants you to fix this and a few other things:
 
 - install Nginx 1.5
 - remove Apache2 completely, including all files that were installed
-- he messed up /etc/crontab
-  - please make a backup of this file to /etc/crontab.backup and install the original file that came with Ubuntu
+- he messed up /etc/crontab. Please make a backup of this file to /etc/crontab.backup and install the original file that came with Ubuntu
 - to prevent the system to ask which editor should be used, please remove `nano`
 
 <h2 class="display-4">Notes</h2>
