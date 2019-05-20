@@ -8,7 +8,7 @@
 
 Your client just got a new Ubuntu server. He already installed Apache2, but decided to use Nginx 1.5 instead.
 
-He already tried to add the [nginx/development repository](https://nginx.org/en/linux_packages.html#Ubuntu) to get the Nginx version 1.5, but `apt get install nginx` didn't work.
+He already tried to add the [nginx/development repository](https://nginx.org/en/linux_packages.html#Ubuntu) to get the Nginx version 1.5, but `apt-get install nginx` didn't work.
 
 He wants you to fix this and a few other things:
 
