@@ -30,7 +30,7 @@ admindōjō utilizes some third-party tools:
 2. [install Vagrant](https://www.vagrantup.com/downloads.html)
 3. [install git](https://git-scm.com/downloads) 
 4. clone training-repository `git clone https://github.com/admindojo/admindojo-training.git`
-    - it is also possible to just [download the trainings](https://github.com/admindojo/admindojo-training/archive/master.zip) - but git provides easier updates via `git pull` 
+    - it is also possible to just [download the trainings](https://github.com/admindojo/admindojo-trainings/archive/master.zip) - but git provides easier updates via `git pull` 
 
 <h3 class="lead">Start training</h3>
 
