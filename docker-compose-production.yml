@@ -1,4 +1,8 @@
 version: '2'
+#.env file:
+#MYSQL_ROOT_PW=
+#MYSQL_USER_NAME=
+#MYSQL_USER_PW=
 
 services:
   proxy:
@@ -24,6 +28,7 @@ services:
       - ctfd
 
   ctfd:
+    env_file: .env
     build: .
     user: root
     restart: always
@@ -31,7 +36,7 @@ services:
       - "8000:8000"
     environment:
       - UPLOAD_FOLDER=/var/uploads
-      - DATABASE_URL=mysql+pymysql://root:ctfd@db/ctfd
+      - DATABASE_URL=mysql+pymysql://root:${MYSQL_ROOT_PW}@db/ctfd
       - REDIS_URL=redis://cache:6379
       - WORKERS=1
       - LOG_FOLDER=/var/log/CTFd
@@ -48,12 +53,13 @@ services:
         internal:
 
   db:
+    env_file: .env
     image: mariadb:10.4
     restart: always
     environment:
-      - MYSQL_ROOT_PASSWORD=ctfd
-      - MYSQL_USER=ctfd
-      - MYSQL_PASSWORD=ctfd
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PW}
+      - MYSQL_USER=${MYSQL_USER_NAME}
+      - MYSQL_PASSWORD=${MYSQL_CTFD_PW}
     volumes:
       - .data/mysql:/var/lib/mysql
     networks:
