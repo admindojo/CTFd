@@ -8,14 +8,13 @@
 
 Your client just got a new Ubuntu server. He already installed Apache2, but decided to use Nginx 1.5 instead.
 
-He already tried to add the [nginx/development repository](https://nginx.org/en/linux_packages.html#Ubuntu) to get the Nginx version 1.5, but `apt get install nginx` didn't work.
+He already tried to add the [nginx/development repository](https://nginx.org/en/linux_packages.html#Ubuntu) to get the Nginx version 1.5, but `apt-get install nginx` didn't work.
 
 He wants you to fix this and a few other things:
 
 - install Nginx 1.5
 - remove Apache2 completely, including all files that were installed
-- he messed up /etc/crontab.
-  - Please make a backup of this file to /etc/crontab.backup and install the original file that came with Ubuntu
+- he messed up /etc/crontab. Please make a backup of this file to /etc/crontab.backup and install the original file that came with Ubuntu
 - to prevent the system to ask which editor should be used, please remove `nano`
 
 <h2 class="display-4">Notes</h2>
