@@ -57,10 +57,6 @@ services:
     env_file: .env
     image: mariadb:10.4
     restart: always
-    environment:
-      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PW}
-      - MYSQL_USER=${MYSQL_USER_NAME}
-      - MYSQL_PASSWORD=${MYSQL_USER_PW}
     volumes:
       - .data/mysql:/var/lib/mysql
     networks:
