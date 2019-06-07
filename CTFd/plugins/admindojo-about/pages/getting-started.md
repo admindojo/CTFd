@@ -45,12 +45,12 @@ To track your progress online, you'll get a `token` after completing a training.
 
 
 <h2 class="display-4">Nice to know</h2>
-<h3 class="lead">General</h3>
-admindōjō heavily utilizes [Vagrant](https://www.vagrantup.com), starting and rebooting the VM differs from normal operation:
+Starting and rebooting the VM differs from normal operation because admindōjō utilizes [Vagrant](https://www.vagrantup.com):
 
 - Use `vagrant ssh` to login/jump into the VM
-- Eexit the VM with _cms+D_ or `exit`
-- To reboot/shutdown the VM, please use the vagrant commands `vagrant reload` and `vagrant halt`, since it does some _magical configuration_ to the VM. You must be inside the training directory to use these commands(One VM per training)
+- Exit the VM with _cms+D_ or `exit`
+- To reboot the VM, please use the command `vagrant reload` from your host, inside the training directory to use these commands
+- To shutdown the VM, please use the command `vagrant halt` from your host, inside the training directory to use these commands
 
 <h3 class="lead">Username and password</h3>
 
@@ -65,15 +65,16 @@ Your user with sudo permission:
     1. exit the VM with _cmd+D_ or `exit`
     2. inside training directory: `vagrant halt`
     
-- start over (delete VM)
+- reset (delete VM)
     1. exit the VM with _cmd+D_ or `exit`
-    2. inside training directory: `vagrant destroy` and `vagrant up` to start again
+    2. inside training directory: `vagrant destroy`
+    3. start again: `vagrant up`
     
 <h3 class="lead">Remove VM after finishing a training</h3>
 
 - inside training directory: `vagrant destroy` (VM needs to be running)
 
-<h3 class="lead">Update admindojo</h3>
+<h3 class="lead">Update trainings/Download latest trainings</h3>
 
 1. Open Powershell(Windows) or Terminal(Mac&Linux)
 2. Change into cloned repository
