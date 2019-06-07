@@ -7,10 +7,11 @@ applicable to a standard Linux installation!</p>
 <h2 class="display-4">Getting started</h2>
 
 1. Install required tools
-2. Start the pre-configured VirtualMachine
-3. [Choose a training](https://admindojo.org/challenges), read the objectives and implement them
-4. Run `admindojo check ` to verify your solution
-5. Track your progress at admindojo.org(optional)
+2. [Choose a training](https://admindojo.org/challenges)
+3. Start the pre-configured VirtualMachine
+4. Read the objectives and implement them
+5. Run `admindojo check ` to verify your solution
+6. Track your progress at admindojo.org(optional)
 
 
 
