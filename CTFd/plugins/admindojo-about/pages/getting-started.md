@@ -59,20 +59,16 @@ Your user with sudo permission:
 - username: `vagrant`
 - password: `vagrant`
 
-<h3 class="lead">Shutdown, reset</h3>
+<h3 class="lead">Reset/Delete VM</h3>
 
-- shutdown
+- reset VM
     1. exit the VM with _cmd+D_ or `exit`
-    2. inside training directory: `vagrant halt`
-    
-- reset (delete VM)
-    1. exit the VM with _cmd+D_ or `exit`
-    2. inside training directory: `vagrant destroy`
+    2. inside training directory: `vagrant destroy` (VM needs to be running)
     3. start again: `vagrant up`
+- delete VM
+    1. exit the VM with _cmd+D_ or `exit`
+    2. inside training directory: `vagrant destroy` (VM needs to be running)
     
-<h3 class="lead">Remove VM after finishing a training</h3>
-
-- inside training directory: `vagrant destroy` (VM needs to be running)
 
 <h3 class="lead">Update trainings/Download latest trainings</h3>
 
