@@ -15,6 +15,7 @@ applicable to a standard Linux installation!</p>
 
 
 <h3 class="lead">Install required tools</h3>
+<small>Requirements: Windows/Mac/Linux, 10-20GB SSD, 2GB RAM, internet</small>
 
 1. [install VirtualBox](https://www.virtualbox.org/)
 2. [install Vagrant](https://www.vagrantup.com/downloads.html)
@@ -22,7 +23,6 @@ applicable to a standard Linux installation!</p>
 4. clone training-repository `git clone https://github.com/admindojo/admindojo-trainings.git`
     - it's also possible to just [download the trainings](https://github.com/admindojo/admindojo-trainings/archive/master.zip) - but git provides easier updates via `git pull` 
 
-<small>Requirements: Windows/Mac/Linux, 10-20GB SSD, 2GB RAM, internet</small
 
 <h3 class="lead">Start training</h3>
 
