@@ -13,24 +13,16 @@ applicable to a standard Linux installation!</p>
 5. Run `admindojo check ` to verify your solution
 6. Track your progress at admindojo.org(optional)
 
-<h3 class="lead">Requirements</h3>
-
-- Windows, Mac, Linux
-- 10-20GB HDD for VMs
-- 1-2GB RAM for VMs
-- Internet connection to download VMs(~500MB once + 50-100MB per training)
-- Due to the usage of VirtualBox, you can't run Docker or Hyper-V in parallel with VirtualBox(See [Vagrants documentation](https://www.vagrantup.com/docs/installation/)).
-
 
 <h3 class="lead">Install required tools</h3>
-
-admindōjō requires some third-party tools: 
 
 1. [install VirtualBox](https://www.virtualbox.org/)
 2. [install Vagrant](https://www.vagrantup.com/downloads.html)
 3. [install git](https://git-scm.com/downloads) 
 4. clone training-repository `git clone https://github.com/admindojo/admindojo-trainings.git`
     - it's also possible to just [download the trainings](https://github.com/admindojo/admindojo-trainings/archive/master.zip) - but git provides easier updates via `git pull` 
+
+<small>Requirements: Windows/Mac/Linux, 10-20GB SSD, 2GB RAM, internet</small
 
 <h3 class="lead">Start training</h3>
 
