@@ -1,9 +1,3 @@
-<p class="lead">admindōjō provides an <strong>easy to setup environment</strong> to train <strong>real-world Linux administration tasks</strong>.</p>
-<p class="lead">Trainings contain real-world scenarios and in-depth explanations.Yout solution gets verified and rated - this way you know exactly if you implemented best-practices.</p>
-<p class="lead">To keep you motivated, admindōjō allows you to track your progress online and compete with others!<br/>
-<strong>admindōjō is not just a simulation</strong>! admindōjō uses unmodified Linux images and real-world objectives - everything that you learn is fully
-applicable to a standard Linux installation!</p>
-                
 <h2 class="display-4">Getting started</h2>
 
 1. Install required tools
