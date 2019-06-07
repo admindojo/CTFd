@@ -41,8 +41,6 @@ applicable to a standard Linux installation!</p>
 
 To track your progress online, you'll get a `token` after completing a training. Go to [challenges](https://admindojo.org/challenges), open a training and submit the `token`.
 
-You do need to [register](https://admindojo.org/register) at admindojo.org to track your progress. <br />
-(In case you're familliar with CTFs, you'll be familliar with the process.)
 
 <h2 class="display-4">Usage</h2>
 <h3 class="lead">General</h3>
