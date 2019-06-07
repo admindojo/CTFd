@@ -51,7 +51,6 @@ admindōjō heavily utilizes [Vagrant](https://www.vagrantup.com), starting and 
 - Use `vagrant ssh` to login/jump into the VM
 - Eexit the VM with _cms+D_ or `exit`
 - To reboot/shutdown the VM, please use the vagrant commands `vagrant reload` and `vagrant halt`, since it does some _magical configuration_ to the VM. You must be inside the training directory to use these commands(One VM per training)
-- Your username is _vagrant_
 
 <h3 class="lead">Username and password</h3>
 
