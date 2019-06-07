@@ -20,7 +20,7 @@ applicable to a standard Linux installation!</p>
 1. [install VirtualBox](https://www.virtualbox.org/)
 2. [install Vagrant](https://www.vagrantup.com/downloads.html)
 3. [install git](https://git-scm.com/downloads) 
-4. clone training-repository `git clone https://github.com/admindojo/admindojo-trainings.git`
+4. clone the training-repository `git clone https://github.com/admindojo/admindojo-trainings.git`
     - it's also possible to just [download the trainings](https://github.com/admindojo/admindojo-trainings/archive/master.zip) - but git provides easier updates via `git pull` 
 
 <p class="text-muted"><small>(Requirements: Windows/Mac/Linux, 10-20GB SSD, 2GB RAM, internet)</small></p>
@@ -44,7 +44,7 @@ applicable to a standard Linux installation!</p>
 To track your progress online, you'll get a `token` after completing a training. Go to [challenges](https://admindojo.org/challenges), open a training and submit the `token`.
 
 
-<h2 class="display-4">Usage</h2>
+<h2 class="display-4">Nice to know</h2>
 <h3 class="lead">General</h3>
 admindōjō heavily utilizes [Vagrant](https://www.vagrantup.com), starting and rebooting the VM differs from normal operation:
 
