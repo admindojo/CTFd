@@ -15,7 +15,7 @@ applicable to a standard Linux installation!</p>
 
 
 <h3 class="lead">Install required tools</h3>
-<small>Requirements: Windows/Mac/Linux, 10-20GB SSD, 2GB RAM, internet</small>
+<p class="text-muted"><small>Windows/Mac/Linux, 10-20GB SSD, 2GB RAM, internet</small></p>
 
 1. [install VirtualBox](https://www.virtualbox.org/)
 2. [install Vagrant](https://www.vagrantup.com/downloads.html)
