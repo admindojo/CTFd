@@ -49,8 +49,8 @@ Starting and rebooting the VM differs from normal operation because admindōjō 
 
 - Use `vagrant ssh` to login/jump into the VM
 - Exit the VM with _cms+D_ or `exit`
-- To reboot the VM, please use the command `vagrant reload` from your host, inside the training directory to use these commands
-- To shutdown the VM, please use the command `vagrant halt` from your host, inside the training directory to use these commands
+- To reboot the VM, please use the command `vagrant reload` from inside the training directory on your host
+- To shutdown the VM, please use the command `vagrant halt` from inside the training directory on your host
 
 <h3 class="lead">Username and password</h3>
 
