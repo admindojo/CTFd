@@ -43,7 +43,7 @@ def teams_listing():
         return render_template(
             "admin/teams/teams.html",
             teams=teams,
-            pages=None,
+            pages=0,
             curr_page=None,
             q=q,
             field=field,
@@ -90,12 +90,9 @@ def teams_detail(team_id):
     missing = Challenges.query.filter(not_(Challenges.id.in_(solve_ids))).all()
 
     # Get addresses for all members
-    last_seen = db.func.max(Tracking.date).label("last_seen")
     addrs = (
-        db.session.query(Tracking.ip, last_seen)
-        .filter(Tracking.user_id.in_(member_ids))
-        .group_by(Tracking.ip)
-        .order_by(last_seen.desc())
+        Tracking.query.filter(Tracking.user_id.in_(member_ids))
+        .order_by(Tracking.date.desc())
         .all()
     )
 

@@ -42,10 +42,18 @@ def users_listing():
                 .order_by(Users.id.asc())
                 .all()
             )
+        elif field == "ip":
+            users = (
+                Users.query.join(Tracking, Users.id == Tracking.user_id)
+                .filter(Tracking.ip.like("%{}%".format(q)))
+                .order_by(Users.id.asc())
+                .all()
+            )
+
         return render_template(
             "admin/users/users.html",
             users=users,
-            pages=None,
+            pages=0,
             curr_page=None,
             q=q,
             field=field,
@@ -93,13 +101,8 @@ def users_detail(user_id):
     missing = Challenges.query.filter(not_(Challenges.id.in_(solve_ids))).all()
 
     # Get IP addresses that the User has used
-    last_seen = db.func.max(Tracking.date).label("last_seen")
     addrs = (
-        db.session.query(Tracking.ip, last_seen)
-        .filter_by(user_id=user_id)
-        .group_by(Tracking.ip)
-        .order_by(last_seen.desc())
-        .all()
+        Tracking.query.filter_by(user_id=user_id).order_by(Tracking.date.desc()).all()
     )
 
     # Get Fails
