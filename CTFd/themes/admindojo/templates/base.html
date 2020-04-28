@@ -33,8 +33,18 @@
 	<link rel="stylesheet" href="{{ url_for('views.themes', path='css/jumbotron.css') }}">
 	<link rel="stylesheet" href="{{ url_for('views.themes', path='css/sticky-footer.css') }}">
 	<link rel="stylesheet" href="{{ url_for('views.themes', path='css/base.css') }}">
+	<script type="text/javascript">
+		var init = {
+			'urlRoot': "{{ request.script_root }}",
+			'csrfNonce': "{{ nonce }}",
+			'userMode': "{{ get_config('user_mode') }}",
+			'userId': {{ id if (id is defined) else 0 }},
+			'start': {{ get_config("start") | tojson }},
+			'end': {{ get_config("end") | tojson }},
+		}
+	</script>
 	{% block stylesheets %}{% endblock %}
-	{% for stylesheet in get_registered_stylesheets() %}
+	{% for stylesheet in get_registered_admin_stylesheets() %}
 		{% if stylesheet.startswith('http') %}
 			<link rel="stylesheet" type="text/css" href="{{ stylesheet }}">
 		{% elif request.script_root %}
@@ -43,24 +53,6 @@
 			<link rel="stylesheet" type="text/css" href="{{ stylesheet }}">
 		{% endif %}
 	{% endfor %}
-	<link rel="stylesheet" type="text/css" href="{{ url_for('views.custom_css') }}">
-	<script src="{{ url_for('views.themes', path='js/vendor/promise-polyfill.min.js') }}"></script>
-	<script src="{{ url_for('views.themes', path='js/vendor/eventsource.min.js') }}"></script>
-	<script src="{{ url_for('views.themes', path='js/vendor/fetch.min.js') }}"></script>
-	<script src="{{ url_for('views.themes', path='js/CTFd.js') }}"></script>
-	<script src="{{ url_for('views.themes', path='js/vendor/moment.min.js') }}"></script>
-	<script src="{{ url_for('views.themes', path='js/vendor/nunjucks.min.js') }}"></script>
-	<script type="text/javascript">
-		var script_root = "{{ request.script_root }}";
-		var csrf_nonce = "{{ nonce }}";
-		var user_mode = "{{ get_config('user_mode') }}";
-		var ctf_start = {{ get_config("start") | tojson }};
-		var ctf_end = {{ get_config("end") | tojson }};
-		CTFd.options.urlRoot = script_root;
-		CTFd.options.csrfNonce = csrf_nonce;
-		CTFd.options.start = ctf_start;
-		CTFd.options.end = ctf_end;
-	</script>
 </head>
 <body>
 	<nav class="navbar navbar-expand-md navbar-dark fixed-top">
@@ -194,6 +186,7 @@
 
 	<script src="{{ url_for('views.themes', path='js/vendor/jquery.min.js') }}"></script>
 	<script src="{{ url_for('views.themes', path='js/vendor/markdown-it.min.js') }}"></script>
+    <script defer src="{{ url_for('views.themes', theme='admin', path='js/helpers.js') }}"></script>
 	<script src="{{ url_for('views.themes', path='js/vendor/bootstrap.bundle.min.js') }}"></script>
 	<script src="{{ url_for('views.themes', path='js/vendor/howler.min.js') }}"></script>
 	<script src="{{ url_for('views.themes', path='js/vendor/window-controller.js') }}"></script>
@@ -204,7 +197,7 @@
 	{% block scripts %}
 	{% endblock %}
 
-	{% for script in get_registered_scripts() %}
+	{% for script in get_registered_admin_scripts() %}
 	{% if script.startswith('http') %}
 	<script src="{{ script }}"></script>
 	{% elif request.script_root %}
