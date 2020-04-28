@@ -1,16 +1,17 @@
 from flask import request
 from flask_restplus import Namespace, Resource
+
 from CTFd.cache import clear_standings
-from CTFd.models import db, get_class_by_tablename, Unlocks
-from CTFd.utils.user import get_current_user
-from CTFd.schemas.unlocks import UnlockSchema
+from CTFd.models import Unlocks, db, get_class_by_tablename
 from CTFd.schemas.awards import AwardSchema
+from CTFd.schemas.unlocks import UnlockSchema
 from CTFd.utils.decorators import (
-    during_ctf_time_only,
-    require_verified_emails,
     admins_only,
     authed_only,
+    during_ctf_time_only,
+    require_verified_emails,
 )
+from CTFd.utils.user import get_current_user
 
 unlocks_namespace = Namespace("unlocks", description="Endpoint to retrieve Unlocks")
 
@@ -57,6 +58,16 @@ class UnlockList(Resource):
 
         if response.errors:
             return {"success": False, "errors": response.errors}, 400
+
+        existing = Unlocks.query.filter_by(**req).first()
+        if existing:
+            return (
+                {
+                    "success": False,
+                    "errors": {"target": "You've already unlocked this this target"},
+                },
+                400,
+            )
 
         db.session.add(response.data)
 

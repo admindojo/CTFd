@@ -1,11 +1,11 @@
-from marshmallow import validate, ValidationError, pre_load
+from marshmallow import ValidationError, pre_load, validate
 from marshmallow_sqlalchemy import field_for
-from CTFd.models import ma, Teams, Users
-from CTFd.utils.validators import validate_country_code
-from CTFd.utils import get_config
-from CTFd.utils.user import is_admin, get_current_team, get_current_user
+
+from CTFd.models import Teams, Users, ma
+from CTFd.utils import get_config, string_types
 from CTFd.utils.crypto import verify_password
-from CTFd.utils import string_types
+from CTFd.utils.user import get_current_team, get_current_user, is_admin
+from CTFd.utils.validators import validate_country_code
 
 
 class TeamSchema(ma.ModelSchema):
@@ -19,6 +19,7 @@ class TeamSchema(ma.ModelSchema):
         Teams,
         "name",
         required=True,
+        allow_none=False,
         validate=[
             validate.Length(min=1, max=128, error="Team names must not be empty")
         ],
@@ -26,6 +27,7 @@ class TeamSchema(ma.ModelSchema):
     email = field_for(
         Teams,
         "email",
+        allow_none=False,
         validate=validate.Email("Emails must be a properly formatted email address"),
     )
     website = field_for(
@@ -48,6 +50,7 @@ class TeamSchema(ma.ModelSchema):
         name = data.get("name")
         if name is None:
             return
+        name = name.strip()
 
         existing_team = Teams.query.filter_by(name=name).first()
         current_team = get_current_team()
